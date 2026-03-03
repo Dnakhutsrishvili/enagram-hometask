@@ -12,7 +12,7 @@ import styles from './header.module.css'
 
 function Header() {
  const [isOpen, setIsOpen] = useState(false);
-   const userName = "Davit Nakhutsrishvili";
+   const userName = "დავით ნახუცრიშვილი";
 
 
   const toggleMenu = () => {
