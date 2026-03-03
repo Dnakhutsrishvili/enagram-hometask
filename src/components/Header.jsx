@@ -7,11 +7,12 @@ import text from '../assets/icons/text.png'
 import mic from '../assets/icons/mic.png'
 import wave from '../assets/icons/wave.png'
 import docs from '../assets/icons/docs.png'
+import arrowRight from '../assets/icons/arrow-right.png'
 import styles from './header.module.css'
 
 function Header() {
  const [isOpen, setIsOpen] = useState(false);
-   const userName = "David";
+   const userName = "Davit Nakhutsrishvili";
 
 
   const toggleMenu = () => {
@@ -63,11 +64,11 @@ function Header() {
         </li>
         <li>
          <img src={mic} alt="mic" />
-        <a href="#" className={styles.navItem}>ტექსტი</a>
+        <a href="#" className={styles.navItem}>ტექსტი <img src={arrowRight} alt="arrow" /> ხმა</a>
         </li>
         <li>
             <img src={wave} alt="wave" />
-        <a href="#" className={styles.navItem}>ხმა</a>
+        <a href="#" className={styles.navItem}>ხმა <img src={arrowRight} alt="arrow" />ტექსტი</a>
         </li>
         <li>
             <img src={docs} alt="docs" />
