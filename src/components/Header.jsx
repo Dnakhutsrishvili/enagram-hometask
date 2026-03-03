@@ -28,8 +28,8 @@ function Header() {
       </div>
       <nav className={`${styles.nav} ${isOpen ? styles.active : ""}`}>
         <ul className={styles.navList}>
-          <li>Home</li>
-          <li>Map</li>
+          <li>მართლმწერი</li>
+          <li>ტექსტი</li>
         </ul>
       </nav>
 
