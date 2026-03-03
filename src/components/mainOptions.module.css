@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.selectWrapper {
+    position: relative;
+    width: 288px;
+}
+
+.select {
+    border: 1px solid #E0E0E0;
+    height: 40px;
+    width: 100%;
+    border-radius: 0.4rem;
+    padding: 0 2.5rem 0 1rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.selectWrapper::after {
+    content: "▼";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.checkbox input {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.4rem;
+}
+
+.btnWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.btnWrapper button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 288px;
+    height: 42px;
+    background-color: var(--deem);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    gap: 0.2rem;
+    cursor: pointer;
+}
+
+.btnWrapper button img {
+    height: 24px;
+    width: 24px;
+}

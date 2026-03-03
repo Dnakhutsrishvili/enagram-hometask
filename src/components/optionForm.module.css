@@ -11,3 +11,9 @@
     width: 16px;
     height: 16px;
 }
+
+@media (min-width: 998px) {
+    .option {
+        display: none;
+    }
+}
