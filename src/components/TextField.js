@@ -1,8 +1,10 @@
 import { useState, useRef } from 'react';
 import styles from './textField.module.css';
 import arrows from '../assets/icons/arrows.png'
+import Loader from './Loader';
 
 function TextField() {
+  const [isLoading, setIsLoading] = useState(false);
   const [text1, setText1] = useState('');
   const [text2, setText2] = useState('');
   const [highlights1, setHighlights1] = useState([]);
@@ -36,10 +38,14 @@ function TextField() {
   };
 
   const handleCompare = () => {
+    setIsLoading(true)
     const { hl1, hl2 } = computeDiff(text1, text2);
     setHighlights1(hl1);
     setHighlights2(hl2);
     setCompared(true);
+    setTimeout(()=>{
+    setIsLoading(false)
+    },1200)
   };
 
   const renderWithHighlights = (text, highlights) => {
@@ -77,7 +83,8 @@ function TextField() {
     return result;
   };
 
-  return (
+  return (<>
+   {isLoading?(<Loader/>):(
     <div className={styles.form}>
       <div className={styles.textareaContainer} ref={container1Ref}>
         {compared && (
@@ -120,7 +127,9 @@ function TextField() {
           შედარება
         </button>
       </div>
-    </div>
+    </div>)
+}
+    </>
   );
 }
 
