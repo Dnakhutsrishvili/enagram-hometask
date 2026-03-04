@@ -11,6 +11,7 @@ function MainOptions() {
   };
   return (
     <div className={styles.container}>
+      <div className={styles.leftWrap}>
     <div className={styles.selectWrapper}>
     <select className={styles.select} name="language">
         <option value="georgian">ქართული</option>
@@ -27,10 +28,10 @@ function MainOptions() {
       ფორმატის შენარჩუნება
     </label>
     </div>
+    </div>
     <div className={styles.btnWrapper}>
         <button> <img src={plus} alt='plus'/> ახლის გახსნა</button>
     </div>
-    <hr/>
     </div>
   )
 }

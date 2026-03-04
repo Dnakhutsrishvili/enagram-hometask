@@ -2,10 +2,10 @@ import MainOptions from "../components/MainOptions"
 import OptionForm from "../components/OptionForm"
 function TextCompare() {
   return (
-    <main>
+    <section>
         <OptionForm/>
         <MainOptions/>
-    </main>
+    </section>
         )
 }
 

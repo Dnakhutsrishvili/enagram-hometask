@@ -4,33 +4,17 @@
     flex-direction: column;
     padding-top: 1rem;
     padding-left: 1rem;
-}
-
-.selectWrapper {
-    position: relative;
-    width: 288px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
 }
 
 .select {
     border: 1px solid #E0E0E0;
     height: 40px;
-    width: 100%;
+    width: 288px;
     border-radius: 0.4rem;
     padding: 0 2.5rem 0 1rem;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     cursor: pointer;
-}
-
-.selectWrapper::after {
-    content: "▼";
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    font-size: 12px;
 }
 
 .checkbox {
@@ -72,4 +56,34 @@
 .btnWrapper button img {
     height: 24px;
     width: 24px;
+}
+
+@media (min-width: 998px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .select {
+        width: 155px;
+    }
+
+    .btnWrapper button {
+        width: 150px;
+    }
+
+    .checkbox {
+        padding-top: 0;
+    }
+
+    .btnWrapper {
+        padding-top: 0;
+    }
+
+    .leftWrap {
+        display: flex;
+        gap: 1rem;
+    }
+
 }

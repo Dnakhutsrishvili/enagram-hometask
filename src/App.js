@@ -4,9 +4,11 @@ import TextCompare from './pages/TextCompare.jsx';
 
 function App() {
   return (
-    <div>
+    <div className="layout">
      <Header/>
+    <main className="main">
      <TextCompare/>
+     </main>
     </div>
   );
 }
