@@ -3,26 +3,53 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     padding-top: 2rem;
 }
 
-.form textarea {
+.textareaContainer {
+    position: relative;
+    width: 90%;
+}
+
+.highlightLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: #F0F7FF;
+    padding: 0.8rem;
+    pointer-events: none;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+    z-index: 0;
+}
+
+.textarea {
+    display: block;
     resize: none;
     outline: none;
     border: none;
     height: 190px;
-    width: 90%;
+    width: 100%;
     padding: 0.8rem;
     font-size: 18px;
+    line-height: 26px;
     font-family: Helvetica, sans-serif;
     font-weight: 400;
+    caret-color: black;
+    position: relative;
+    z-index: 1;
 }
 
-.form img {
-    height: 32px;
-    width: 32px;
+.textarea:focus {
+    outline: none;
 }
 
 .btnWrapper {
@@ -47,6 +74,34 @@
     color: white;
     gap: 0.2rem;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btnWrapper button:hover {
+    opacity: 0.9;
+}
+
+.btnWrapper button:active {
+    transform: scale(0.98);
+}
+
+.deleted {
+    background-color: #ff6b6b;
+    color: #8b0000;
+    display: inline;
+    padding: 2px 0;
+}
+
+.added {
+    background-color: #3EBC5E;
+    color: #1b4620;
+    display: inline;
+    padding: 2px 0;
+}
+
+.arrows {
+    height: 32px;
+    width: 32px;
 }
 
 @media (min-width: 998px) {
@@ -54,12 +109,17 @@
         flex-direction: row;
     }
 
-    .form textarea {
+    .textarea {
         height: 432px;
     }
 
-    .form img {
+    .arrows {
         transform: rotate(90deg);
+        margin-left: 1.4rem;
+    }
 
+    .btnWrapper {
+        position: absolute;
+        bottom: 2rem;
     }
 }
