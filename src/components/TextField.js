@@ -3,10 +3,8 @@ import styles from './textField.module.css';
 import arrows from '../assets/icons/arrows.png'
 import Loader from './Loader';
 
-function TextField() {
+function TextField({text1, text2, setText1, setText2}) {
   const [isLoading, setIsLoading] = useState(false);
-  const [text1, setText1] = useState('');
-  const [text2, setText2] = useState('');
   const [highlights1, setHighlights1] = useState([]);
   const [highlights2, setHighlights2] = useState([]);
   const [compared, setCompared] = useState(false);
@@ -123,7 +121,7 @@ function TextField() {
       </div>
 
       <div className={styles.btnWrapper}>
-        <button onClick={handleCompare}>
+        <button style={text1.length>1&&text2.length>1?{ backgroundColor: '#4571E4' }:{ backgroundColor: '#383A4899' }} onClick={handleCompare}>
           შედარება
         </button>
       </div>

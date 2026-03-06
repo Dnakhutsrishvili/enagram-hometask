@@ -3,12 +3,16 @@ import { useState } from 'react';
 import styles from './mainOptions.module.css'
 import plus from '../assets/icons/plus.png'
 
-function MainOptions() {
+function MainOptions({text1, text2, setText1, setText2}) {
       const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = (e) => {
     setIsChecked(e.target.checked);
   };
+  const handleClear=()=>{
+    setText1('')
+    setText2('')
+  }
   return (
     <div className={styles.container}>
       <div className={styles.leftWrap}>
@@ -30,7 +34,7 @@ function MainOptions() {
     </div>
     </div>
     <div className={styles.btnWrapper}>
-        <button> <img src={plus} alt='plus'/> ახლის გახსნა</button>
+        <button style={text1.length>1||text2.length>1?{ backgroundColor: '#4571E4' }:{ backgroundColor: '#383A4899' }} onClick={()=>handleClear()}> <img src={plus} alt='plus'/> ახლის გახსნა</button>
     </div>
     </div>
   )
