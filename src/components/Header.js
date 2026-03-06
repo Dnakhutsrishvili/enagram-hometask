@@ -56,23 +56,23 @@ function Header() {
     <ul>
         <li>
             <img src={check} alt="check" />
-        <a href="#" className={styles.navItem}>მართლმწერი</a>
+        <a href="https://enagram.ai/tools/textcompare" className={styles.navItem}>მართლმწერი</a>
         </li>
         <li>
              <img src={text} alt="text" />
-        <a href="#" className={styles.navItem}>ტექსტის შედარება</a>
+        <a href="https://enagram.ai/tools/textcompare" className={styles.navItem}>ტექსტის შედარება</a>
         </li>
         <li>
          <img src={mic} alt="mic" />
-        <a href="#" className={styles.navItem}>ტექსტი <img src={arrowRight} alt="arrow" /> ხმა</a>
+        <a href="https://enagram.ai/tools/textcompare" className={styles.navItem}>ტექსტი <img src={arrowRight} alt="arrow" /> ხმა</a>
         </li>
         <li>
             <img src={wave} alt="wave" />
-        <a href="#" className={styles.navItem}>ხმა <img src={arrowRight} alt="arrow" />ტექსტი</a>
+        <a href="https://enagram.ai/tools/textcompare" className={styles.navItem}>ხმა <img src={arrowRight} alt="arrow" />ტექსტი</a>
         </li>
         <li>
             <img src={docs} alt="docs" />
-        <a href="#" className={styles.navItem}>PDF კონვერტაცია</a>
+        <a href="https://enagram.ai/tools/textcompare" className={styles.navItem}>PDF კონვერტაცია</a>
         </li>
     </ul>
       </nav>
